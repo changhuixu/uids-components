@@ -1,0 +1,20 @@
+.iowa-bar {
+  position: relative;
+  z-index: 2;
+  display: block;
+  min-height: auto;
+  background: #151515;
+}
+@media (min-width: 855px) {
+  .iowa-bar {
+    background: #ffcd00;
+  }
+}
+
+.iowa-bar__container {
+  max-width: 1310px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin: 0 auto;
+}
