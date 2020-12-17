@@ -1,33 +1,30 @@
 .footer {
   background: #151515;
-  padding-top: 2.5rem;
-  padding-right: 0;
-  padding-bottom: 2.5rem;
-  padding-left: 0;
+  padding: 2.5rem 0;
 }
 .footer__container {
   margin: 0 1.25rem;
   padding-bottom: 1.875rem;
 }
 
-.footer p {
+.footer__container p {
   color: #ccc;
   line-height: 1.5;
   font-weight: 100;
   margin-top: 0.9rem;
 }
-.footer p a {
+.footer__container p a {
   color: #ffcd00;
   text-decoration: none;
   font-weight: 400;
 }
-.footer p a:hover,
-.footer p a:focus {
+.footer__container p a:hover,
+.footer__container p a:focus {
   text-decoration: underline;
 }
-.footer p a i,
-.footer p a svg,
-.footer p a span {
+.footer__container p a i,
+.footer__container p a svg,
+.footer__container p a span {
   margin-right: 0.625rem;
   font-size: 0.8rem;
   color: #999;
@@ -49,9 +46,7 @@
   font-size: 0.8rem;
   border-right: 1px solid #5d5656;
   margin-bottom: 0.325rem;
-  padding-top: 0;
-  padding-right: 0.625rem;
-  padding-left: 0.625rem;
+  padding: 0 0.625rem;
 }
 .socket__menu li:first-child {
   flex-basis: 100%;
@@ -83,10 +78,7 @@
 
 @media (min-width: 855px) {
   .footer {
-    padding-top: 2.5rem;
-    padding-right: 0;
-    padding-bottom: 0;
-    padding-left: 0;
+    padding: 2.5rem 0 0 0;
   }
 
   .logo--footer {
