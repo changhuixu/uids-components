@@ -14,12 +14,6 @@
   margin: 0 1.25rem;
   position: relative;
 }
-@media (min-width: 84.375em) {
-  .footer__container {
-    max-width: 81.875em;
-    margin: 0 auto;
-  }
-}
 
 .footer {
   position: relative;
@@ -29,14 +23,7 @@
   padding-bottom: 2.5rem;
   padding-left: 0;
 }
-@media (min-width: 855px) {
-  .footer {
-    padding-top: 2.5rem;
-    padding-right: 0;
-    padding-bottom: 0;
-    padding-left: 0;
-  }
-}
+
 .footer p {
   color: #ccc;
   line-height: 1.5;
@@ -60,17 +47,6 @@
   color: #999;
 }
 
-@media (min-width: 84.375em) {
-  .footer__container {
-    padding: 0;
-  }
-}
-@media (min-width: 855px) {
-  .footer__container--flex {
-    display: flex;
-    flex-wrap: wrap;
-  }
-}
 .footer__links {
   margin-top: 0;
   margin-right: 0;
@@ -78,12 +54,6 @@
   flex-grow: 1;
   flex-shrink: 1;
   flex-basis: 0;
-}
-
-@media (min-width: 855px) {
-  .footer__links--contact {
-    flex-grow: 2;
-  }
 }
 
 .socket__menu {
@@ -126,12 +96,32 @@
   padding: 0 40px 0 0;
   width: 128px;
 }
+
 @media (min-width: 855px) {
+  .footer {
+    padding-top: 2.5rem;
+    padding-right: 0;
+    padding-bottom: 0;
+    padding-left: 0;
+  }
+  .footer__container--flex {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .footer__links--contact {
+    flex-grow: 2;
+  }
   .logo--footer {
     width: 145px;
   }
 }
-@media (min-width: 84.375em) {
+
+@media (min-width: 1350px) {
+  .footer__container {
+    max-width: 1310px;
+    margin: 0 auto;
+    padding: 0;
+  }
   .logo--footer {
     width: 176px;
   }
