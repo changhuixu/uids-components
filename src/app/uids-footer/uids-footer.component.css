@@ -2,8 +2,7 @@
 .footer__links .menu ul li,
 .footer__links--icon ul,
 .footer__links--icon li,
-.socket__menu,
-.footer-cta__container .menu {
+.socket__menu {
   list-style-type: none;
   padding: 0;
   margin: 0;
@@ -12,23 +11,20 @@
 .footer__links .menu ul li > li,
 .footer__links--icon ul > li,
 .footer__links--icon li > li,
-.socket__menu > li,
-.footer-cta__container .menu > li {
+.socket__menu > li {
   display: inline-block;
   list-style-type: none;
   margin: 0;
 }
 
 .footer__container,
-.socket__container,
-.footer-cta__container {
+.socket__container {
   margin: 0 1.25rem;
   position: relative;
 }
 @media (min-width: 84.375em) {
   .footer__container,
-  .socket__container,
-  .footer-cta__container {
+  .socket__container {
     max-width: 81.875em;
     margin: 0 auto;
   }
@@ -224,86 +220,6 @@
 .socket__menu li a:hover,
 .socket__menu li a:focus {
   text-decoration: underline;
-}
-
-.footer-cta__wrapper {
-  background: #ffcd00;
-  padding: 1.875rem 0;
-  margin: 0;
-}
-@media (min-width: 768px) {
-  .footer-cta__wrapper .menu {
-    display: flex;
-  }
-}
-.footer-cta__wrapper .menu li {
-  flex: 1;
-  display: block;
-}
-.footer-cta__wrapper .bttn--outline {
-  border: 1px solid #151515;
-  display: block;
-}
-@media (min-width: 768px) {
-  .footer-cta__wrapper .bttn--outline {
-    flex: 1;
-    display: block;
-  }
-}
-
-.footer-cta__container {
-  justify-content: space-between;
-}
-.footer-cta__container div:first-of-type,
-.footer-cta__container nav:first-of-type {
-  flex-basis: 100%;
-}
-@media (min-width: 768px) {
-  .footer-cta__container {
-    display: flex;
-  }
-}
-@media (min-width: 84.375em) {
-  .footer-cta__container {
-    padding: 0;
-  }
-}
-
-@media (min-width: 768px) {
-  .footer-cta__container .menu li:first-child a {
-    margin: 0 1.05rem 0 0;
-  }
-  .footer-cta__container .menu li:last-child a {
-    margin: 0 0 0 1.05rem;
-  }
-}
-
-.footer-cta__container .menu a {
-  margin: 1.05rem 0;
-  padding-top: 0.325rem;
-}
-@media (min-width: 768px) {
-  .footer-cta__container .menu a {
-    margin: 0 1.05rem;
-  }
-}
-.footer-cta__container .menu a:before {
-  content: ' ';
-  background-repeat: no-repeat;
-  background-size: 90%;
-  width: 35px;
-  height: 35px;
-  display: inline-block;
-  margin-bottom: -5px;
-  margin-right: 5px;
-}
-
-.footer-cta__container > a:first-child {
-  margin-left: 0;
-}
-
-.footer-cta__container > a:last-child {
-  margin-right: 0;
 }
 
 .logo--footer {
