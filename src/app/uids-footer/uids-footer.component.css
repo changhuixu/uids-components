@@ -1,6 +1,7 @@
 .footer {
   background: #151515;
   padding: 2.5rem 0;
+  font-family: Roboto,sans-serif;
 }
 .footer__container {
   margin: 0 1.25rem;
