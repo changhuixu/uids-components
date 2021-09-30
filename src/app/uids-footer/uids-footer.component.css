@@ -1,11 +1,12 @@
 .footer {
   background: #151515;
   padding: 2.5rem 0;
-  font-family: Roboto,sans-serif;
+  font-family: Roboto, sans-serif;
 }
 .footer__container {
   margin: 0 1.25rem;
   padding-bottom: 1.875rem;
+  width: 100%;
 }
 
 .footer__container p {
@@ -29,6 +30,24 @@
   margin-right: 0.625rem;
   font-size: 0.8rem;
   color: #999;
+}
+
+.footer a.site-name-link {
+  color: #fff;
+  text-decoration: none;
+}
+.footer a.site-name-link:focus,
+.footer a.site-name-link:hover {
+  text-decoration: underline;
+}
+
+.footer .site-name {
+  color: #fff;
+  font-size: 1.7rem;
+  margin-top: 1.05rem;
+  font-weight: 900;
+  line-height: 1;
+  margin-bottom: 0.325rem;
 }
 
 .socket__menu {
@@ -77,6 +96,23 @@
   width: 128px;
 }
 
+.footer__container .menu {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+.footer__container .menu .menu-item a {
+  line-height: 1.7;
+  font-weight: 300;
+  text-decoration: none;
+  color: #fff;
+  font-size: 1.1rem;
+}
+.footer__container .menu .menu-item a:focus,
+.footer__container .menu .menu-item a:hover {
+  text-decoration: underline;
+}
+
 @media (min-width: 855px) {
   .footer {
     padding: 2.5rem 0 0 0;
@@ -85,6 +121,11 @@
   .logo--footer {
     width: 145px;
   }
+
+  .footer__container {
+    flex-direction: row !important;
+  }
+
 }
 
 @media (min-width: 1350px) {
