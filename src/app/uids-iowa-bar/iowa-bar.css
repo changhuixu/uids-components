@@ -1,0 +1,38 @@
+.iowa-bar {
+  position: relative;
+  z-index: 2;
+  display: block;
+  min-height: auto;
+  background: #151515;
+}
+@media (min-width: 855px) {
+  .iowa-bar {
+    background: #ffcd00;
+  }
+}
+
+.iowa-bar__container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  max-width: 81.875em;
+  margin: 0 auto;
+}
+@media (min-width: 855px) {
+  .iowa-bar__container {
+    justify-content: flex-start;
+  }
+}
+
+.link-list {
+  display: flex;
+  justify-content: flex-end;
+  flex-grow: 2;
+  padding-right: 1.25rem;
+}
+
+@media (min-width: 855px) {
+  .link-list {
+    padding-right: 15px;
+  }
+}
