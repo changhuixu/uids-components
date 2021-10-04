@@ -1,0 +1,32 @@
+.site-name {
+  display: flex;
+  align-items: center;
+  margin: 0;
+  text-align: left;
+  font-size: 1rem;
+  font-weight: 300;
+  line-height: 1;
+  font-family: 'Roboto', sans-serif;
+  width: 100%;
+  padding: 1.25rem;
+  background: #ffcd00;
+}
+.site-name a {
+  color: #151515;
+  text-decoration: none;
+}
+@media (min-width: 855px) {
+  .site-name {
+    flex-basis: content;
+    margin: 1px 0 0 0;
+    font-size: 1rem;
+    width: auto;
+    background: transparent;
+    padding: 0;
+  }
+}
+@media (min-width: 84.375em) {
+  .site-name {
+    margin: 5px 0 0 0;
+  }
+}

@@ -12,9 +12,22 @@
 }
 
 .iowa-bar__container {
-  max-width: 1310px;
-  display: flex;
+  max-width: 81.875em;
   flex-wrap: wrap;
   justify-content: space-between;
   margin: 0 auto;
 }
+@media (min-width: 855px) {
+  .iowa-bar__container {
+    justify-content: flex-start;
+    display: flex;
+  }
+}
+
+@media (min-width: 855px) {
+  .iowa-bar--narrow {
+    min-height: 50px;
+    position: relative;
+  }
+}
+

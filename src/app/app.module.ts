@@ -3,20 +3,19 @@ import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { UidsIowaBarComponent } from './uids-iowa-bar/uids-iowa-bar.component';
+import { UidsIowaBarFullComponent } from './uids-iowa-bar-full/uids-iowa-bar-full.component';
 import { UidsFooterComponent } from './uids-footer/uids-footer.component';
+import { UidsIowaBarNarrowComponent } from './uids-iowa-bar-narrow/uids-iowa-bar-narrow.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    UidsIowaBarComponent,
-    UidsFooterComponent
+    UidsIowaBarFullComponent,
+    UidsFooterComponent,
+    UidsIowaBarNarrowComponent,
   ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule
-  ],
+  imports: [BrowserModule, AppRoutingModule],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}
