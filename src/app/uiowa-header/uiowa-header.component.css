@@ -1,0 +1,14 @@
+.link-list {
+  display: flex;
+  justify-content: flex-end;
+  flex-grow: 2;
+  padding-right: 1.25rem;
+  order: 2;
+}
+
+@media (min-width: 855px) {
+  .link-list {
+    padding-right: 15px;
+    order: 3;
+  }
+}

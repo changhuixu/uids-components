@@ -1,5 +1,12 @@
 <!-- <uids-iowa-bar-full></uids-iowa-bar-full> -->
 <!-- <uids-iowa-bar-narrow></uids-iowa-bar-narrow> -->
-<uids-iowa-bar></uids-iowa-bar>
-<main></main>
+<!-- <uids-iowa-bar></uids-iowa-bar> -->
+<uiowa-header
+  [user]="user"
+  [internalRoutes]="internalRoutes"
+  [externalLinks]="externalLinks"
+></uiowa-header>
+<main>
+  <router-outlet></router-outlet>
+</main>
 <uids-footer></uids-footer>

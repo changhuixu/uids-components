@@ -8,6 +8,11 @@ import { UidsFooterComponent } from './uids-footer/uids-footer.component';
 import { UidsIowaBarNarrowComponent } from './uids-iowa-bar-narrow/uids-iowa-bar-narrow.component';
 import { UidsIowaBarComponent } from './uids-iowa-bar/uids-iowa-bar.component';
 import { UsernameDropdownComponent } from './username-dropdown/username-dropdown.component';
+import { UiowaHeaderComponent } from './uiowa-header/uiowa-header.component';
+import { HomeComponent } from './features/home/home.component';
+import { FacultyComponent } from './features/faculty/faculty.component';
+import { UndergradComponent } from './features/undergrad/undergrad.component';
+import { GradComponent } from './features/grad/grad.component';
 
 @NgModule({
   declarations: [
@@ -17,6 +22,11 @@ import { UsernameDropdownComponent } from './username-dropdown/username-dropdown
     UidsIowaBarNarrowComponent,
     UidsIowaBarComponent,
     UsernameDropdownComponent,
+    UiowaHeaderComponent,
+    HomeComponent,
+    FacultyComponent,
+    UndergradComponent,
+    GradComponent,
   ],
   imports: [BrowserModule, AppRoutingModule],
   providers: [],

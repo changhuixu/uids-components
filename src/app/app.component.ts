@@ -1,4 +1,7 @@
 import { Component } from '@angular/core';
+import { ExternalLink } from './models/external-link';
+import { HeaderUser } from './models/header-user';
+import { InternalRoute } from './models/internal-route';
 
 @Component({
   selector: 'app-root',
@@ -6,5 +9,33 @@ import { Component } from '@angular/core';
   styleUrls: ['app.component.css'],
 })
 export class AppComponent {
-  title = 'uids-components';
+  externalLinks?: ExternalLink[];
+  internalRoutes?: InternalRoute[];
+  user?: HeaderUser;
+
+  ngOnInit() {
+    this.user = {
+      userName: 'abc',
+      originalUserName: 'changhxu',
+    };
+
+    this.externalLinks = [
+      new ExternalLink(
+        'Employee Self-Service',
+        'https://hris.uiowa.edu/portal18'
+      ),
+      new ExternalLink('Grant Accounting Office', 'https://gao.fo.uiowa.edu/'),
+      new ExternalLink(
+        'PAR Instructions',
+        'https://gao.fo.uiowa.edu/effort-reporting/par-instructions'
+      ),
+    ];
+
+    this.internalRoutes = [
+      new InternalRoute('Home', 'home'),
+      new InternalRoute('Faculty', 'faculty'),
+      new InternalRoute('Undergraduate Students', 'undergrad'),
+      new InternalRoute('Graduate Students', 'grad'),
+    ];
+  }
 }
