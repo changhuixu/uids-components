@@ -13,6 +13,7 @@ import { LoginService } from '../services/login.service';
     './site-name.css',
     './iowa-bar.css',
     './main-menu.css',
+    './menu-item.css',
     './external-links.css',
   ],
 })
@@ -25,10 +26,13 @@ export class UiowaHeaderComponent implements OnInit {
   @Output() stopImpersonation = new EventEmitter<void>();
   @Input() showTestWarning = false;
   showNavBar = false;
+  showMenuDropdown: boolean[] = [];
 
   constructor(private readonly loginService: LoginService) {}
 
-  ngOnInit() {}
+  ngOnInit() {
+    this.showMenuDropdown = this.internalRoutes?.map((_) => false) ?? [];
+  }
 
   logout() {
     this.loginService.logout();

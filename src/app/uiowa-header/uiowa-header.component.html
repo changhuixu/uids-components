@@ -62,10 +62,54 @@
 <nav id="navbar-primary" class="nav" [ngClass]="{ show: showNavBar }">
   <div class="main-menu">
     <ul class="menu">
-      <li class="menu-item" *ngFor="let item of internalRoutes">
-        <a [routerLink]="item.route" routerLinkActive="is-active">
+      <li
+        class="menu-item"
+        *ngFor="let item of internalRoutes; let i = index"
+        routerLinkActive="is-active"
+      >
+        <a
+          *ngIf="!item.subMenus"
+          [routerLink]="item.route"
+          (click)="showNavBar = false"
+        >
           {{ item.text }}
         </a>
+        <div *ngIf="item.subMenus" class="menu-dropdown">
+          <a
+            *ngIf="item.route"
+            [attr.id]="'menuDropdown_' + item.text"
+            [routerLink]="item.route"
+            (click)="showMenuDropdown[i] = !showMenuDropdown[i]"
+            [attr.aria-expanded]="showMenuDropdown[i]"
+          >
+            {{ item.text }}
+          </a>
+          <a
+            *ngIf="!item.route"
+            [attr.id]="'menuDropdown_' + item.text"
+            href="javascript:void(0)"
+            (click)="showMenuDropdown[i] = !showMenuDropdown[i]"
+            [attr.aria-expanded]="showMenuDropdown[i]"
+          >
+            {{ item.text }}
+          </a>
+          <div
+            class="menu-dropdown-content"
+            [attr.aria-labelledby]="'menuDropdown_' + item.text"
+            [ngClass]="{ show: showMenuDropdown[i] }"
+          >
+            <ng-container *ngFor="let subitem of item.subMenus">
+              <a
+                *ngIf="subitem.route"
+                class="menu-dropdown-item"
+                [routerLink]="subitem.route"
+                (click)="showMenuDropdown[i] = false; showNavBar = false"
+              >
+                {{ subitem.text }}
+              </a>
+            </ng-container>
+          </div>
+        </div>
       </li>
     </ul>
     <div class="external-links">

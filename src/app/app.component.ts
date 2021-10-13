@@ -35,7 +35,11 @@ export class AppComponent {
       new InternalRoute('Home', 'home'),
       new InternalRoute('Faculty', 'faculty'),
       new InternalRoute('Undergraduate Students', 'undergrad'),
-      new InternalRoute('Graduate Students', 'grad'),
+      new InternalRoute('Graduate Students', '', [
+        new InternalRoute('Program Overview', 'grad/overview'),
+        new InternalRoute('Master Degree', 'grad/master'),
+        new InternalRoute('PhD Degree', 'grad/phd'),
+      ]),
     ];
   }
 }

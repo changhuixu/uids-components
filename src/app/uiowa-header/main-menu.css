@@ -12,8 +12,13 @@
   flex-direction: column;
   padding: 0 0 0 1.25rem;
   width: 100%;
+  background-color: #f3f3f3;
 }
-
+@media (max-width: 855px) {
+  .main-menu {
+    position: absolute;
+  }
+}
 @media (min-width: 855px) {
   .nav {
     display: flex;
@@ -39,6 +44,7 @@
 }
 
 .menu li {
+  position: relative;
   list-style-type: none;
   border-bottom: 1px solid rgba(0, 0, 0, 0.125);
 }
@@ -60,6 +66,11 @@
 }
 .is-active {
   font-weight: bold;
+}
+@media (max-width: 855px) {
+  .is-active {
+    background-color: #ffffff;
+  }
 }
 .is-active:after {
   background: #ffcd00;
@@ -110,7 +121,7 @@
     transform: translate(-50%, 0) scaleX(1);
   }
 
-  .menu li a.is-active:after {
+  .is-active:after {
     background: #ffcd00;
     content: '';
     position: absolute;
