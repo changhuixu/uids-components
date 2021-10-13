@@ -77,25 +77,35 @@
         <div *ngIf="item.subMenus" class="menu-dropdown">
           <a
             *ngIf="item.route"
-            [attr.id]="'menuDropdown_' + item.text"
+            [attr.id]="'menuDropdown_' + i"
             [routerLink]="item.route"
             (click)="showMenuDropdown[i] = !showMenuDropdown[i]"
             [attr.aria-expanded]="showMenuDropdown[i]"
           >
             {{ item.text }}
+            <span
+              aria-hidden="true"
+              class="dropdown-item-arrow"
+              [ngClass]="showMenuDropdown[i] ? 'up' : 'down'"
+            ></span>
           </a>
           <a
             *ngIf="!item.route"
-            [attr.id]="'menuDropdown_' + item.text"
+            [attr.id]="'menuDropdown_' + i"
             href="javascript:void(0)"
             (click)="showMenuDropdown[i] = !showMenuDropdown[i]"
             [attr.aria-expanded]="showMenuDropdown[i]"
           >
             {{ item.text }}
+            <span
+              aria-hidden="true"
+              class="dropdown-item-arrow"
+              [ngClass]="showMenuDropdown[i] ? 'up' : 'down'"
+            ></span>
           </a>
           <div
             class="menu-dropdown-content"
-            [attr.aria-labelledby]="'menuDropdown_' + item.text"
+            [attr.aria-labelledby]="'menuDropdown_' + i"
             [ngClass]="{ show: showMenuDropdown[i] }"
           >
             <ng-container *ngFor="let subitem of item.subMenus">

@@ -27,12 +27,13 @@
   <div
     aria-labelledby="username-dropdown"
     role="menuitem"
-    class="logout-dropdown dropdown-menu-right"
+    class="username-dropdown dropdown-menu-right"
     [ngClass]="{ show: showMenu }"
   >
-    <a
+    <button
+      type="button"
       *ngIf="user.originalUserName"
-      href="javascript:void(0)"
+      class="username-dropdown-button"
       (click)="stopImpersonation.emit()"
     >
       <svg
@@ -48,9 +49,9 @@
         ></path>
       </svg>
       <span class="ml-1">Stop Impersonation</span>
-    </a>
+    </button>
     <div *ngIf="user.originalUserName" class="dropdown-divider"></div>
-    <a href="javascript:void(0)" (click)="logout()">
+    <button type="button" class="username-dropdown-button" (click)="logout()">
       <svg
         aria-hidden="true"
         role="icon"
@@ -64,7 +65,7 @@
         ></path>
       </svg>
       <span class="ml-1">Logout</span>
-    </a>
+    </button>
   </div>
 </div>
 

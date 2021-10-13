@@ -133,16 +133,17 @@
     transition: transform 0.3s ease-in-out;
     transform: translate(-50%, 0) scaleX(1);
   }
-  .menu li a:before {
+  .menu li:before {
     position: absolute;
     right: 0;
-    width: 1px;
+    top: 25%;
     height: 50%;
+    width: 1px;
     content: '';
     background: #ffcd00;
   }
 
-  .menu li:last-of-type a:before {
+  .menu li:last-of-type:before {
     width: 0;
   }
 }

@@ -40,6 +40,10 @@ export class AppComponent {
         new InternalRoute('Master Degree', 'grad/master'),
         new InternalRoute('PhD Degree', 'grad/phd'),
       ]),
+      new InternalRoute('Outreach', 'outreach', [
+        new InternalRoute('K12', 'outreach/k12'),
+        new InternalRoute('Community', 'outreach/community'),
+      ]),
     ];
   }
 }

@@ -89,18 +89,23 @@
   display: block !important;
 }
 
-.logout-dropdown {
+.username-dropdown {
   min-width: 7rem;
   padding: 0.5rem 1rem;
 }
 
-.logout-dropdown a {
+.username-dropdown-button {
   color: #0064d0;
-  text-decoration: none;
   background-color: transparent;
   white-space: nowrap;
   display: flex;
   align-items: center;
+  padding: 0;
+  margin: 0;
+  border: none;
+  cursor: pointer;
+  font-size: 1rem;
+  line-height: 1.5;
 }
 
 .dropdown-divider {

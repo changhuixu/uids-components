@@ -12,6 +12,8 @@ import { UiowaHeaderComponent } from './uiowa-header/uiowa-header.component';
 import { HomeComponent } from './features/home/home.component';
 import { FacultyComponent } from './features/faculty/faculty.component';
 import { UndergradComponent } from './features/undergrad/undergrad.component';
+import { ContactUsComponent } from './features/contact-us/contact-us.component';
+import { NewsComponent } from './features/news/news.component';
 
 @NgModule({
   declarations: [
@@ -25,6 +27,8 @@ import { UndergradComponent } from './features/undergrad/undergrad.component';
     HomeComponent,
     FacultyComponent,
     UndergradComponent,
+    ContactUsComponent,
+    NewsComponent,
   ],
   imports: [BrowserModule, AppRoutingModule],
   providers: [],
