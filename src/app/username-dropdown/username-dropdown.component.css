@@ -9,29 +9,22 @@
 }
 .user-button {
   color: #ffcd00;
-  text-decoration: none;
   cursor: pointer;
   padding: 0 !important;
   font-weight: 400;
-  display: inline-block;
-  text-align: center;
-  vertical-align: middle;
-  user-select: none;
+  white-space: nowrap;
   background-color: transparent;
   border: none;
   font-size: 1rem;
   line-height: 1.5;
 }
-.user-button:hover {
-  text-decoration: none;
-}
+
 @media (min-width: 855px) {
   .user-button {
     color: #151515;
   }
 }
 .user-name {
-  max-width: calc(100vw - 150px);
   white-space: nowrap;
   text-overflow: ellipsis;
   overflow: hidden;

@@ -2,9 +2,12 @@
 <!-- <uids-iowa-bar-narrow></uids-iowa-bar-narrow> -->
 <!-- <uids-iowa-bar></uids-iowa-bar> -->
 <uiowa-header
-  [user]="user"
+  applicationName="Awesome Site"
+  [user]="headerUser"
   [internalRoutes]="internalRoutes"
   [externalLinks]="externalLinks"
+  (stopImpersonation)="stopImpersonation()"
+  [showTestWarning]="true"
 ></uiowa-header>
 <main>
   <router-outlet></router-outlet>

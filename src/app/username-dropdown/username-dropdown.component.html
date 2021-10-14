@@ -34,7 +34,7 @@
       type="button"
       *ngIf="user.originalUserName"
       class="username-dropdown-button"
-      (click)="stopImpersonation.emit()"
+      (click)="stopImpersonation.emit(); showMenu = false"
     >
       <svg
         aria-hidden="true"

@@ -12,3 +12,18 @@
     order: 3;
   }
 }
+
+.test-warning {
+  display: none;
+  color: #ffcd00;
+  background-color: #ad0000;
+  font-weight: bold;
+  font-family: sans-serif;
+  margin: auto;
+  padding: 0.5rem 1rem;
+}
+@media (min-width: 855px) {
+  .test-warning {
+    display: flex;
+  }
+}

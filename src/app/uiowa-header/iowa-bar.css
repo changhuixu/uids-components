@@ -19,6 +19,9 @@
 }
 
 @media (min-width: 855px) {
+  .iowa-bar__container {
+    flex-wrap: nowrap;
+  }
   .iowa-bar--narrow {
     min-height: 50px;
     position: relative;

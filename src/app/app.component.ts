@@ -11,10 +11,10 @@ import { InternalRoute } from './models/internal-route';
 export class AppComponent {
   externalLinks?: ExternalLink[];
   internalRoutes?: InternalRoute[];
-  user?: HeaderUser;
+  headerUser?: HeaderUser;
 
   ngOnInit() {
-    this.user = {
+    this.headerUser = {
       userName: 'abc',
       originalUserName: 'changhxu',
     };
@@ -45,5 +45,13 @@ export class AppComponent {
         new InternalRoute('Community', 'outreach/community'),
       ]),
     ];
+  }
+
+  stopImpersonation() {
+    this.headerUser = {
+      userName: 'changhxu',
+      originalUserName: '',
+    };
+    console.log(`impersonation stopped`);
   }
 }

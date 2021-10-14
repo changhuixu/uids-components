@@ -13,6 +13,7 @@
   margin: 0;
   font-size: 1.3rem;
   font-weight: 300;
+  white-space: nowrap;
 }
 .site-name a {
   color: #151515;
