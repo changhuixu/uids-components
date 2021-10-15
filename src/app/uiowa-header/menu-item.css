@@ -26,12 +26,11 @@
 }
 
 .dropdown-item-arrow.down {
-  margin: 0 0 4px 4px;
+  transform-origin: right;
   transform: rotate(45deg);
   -webkit-transform: rotate(45deg);
 }
 .dropdown-item-arrow.up {
-  margin: 0 4px 0 4px;
   transform: rotate(-135deg);
   -webkit-transform: rotate(-135deg);
 }

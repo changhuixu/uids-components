@@ -33,6 +33,15 @@ export class UiowaHeaderComponent implements OnInit {
     this.showMenuDropdown = this.internalRoutes?.map((_) => false) ?? [];
   }
 
+  toggleMenuCollapse(i: number) {
+    this.showMenuDropdown[i] = !this.showMenuDropdown[i];
+    this.showMenuDropdown.forEach((x, index) => {
+      if (x && index !== i) {
+        this.showMenuDropdown[index] = false;
+      }
+    });
+  }
+
   logout() {
     this.loginService.logout();
   }

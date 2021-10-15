@@ -17,6 +17,7 @@
 @media (max-width: 855px) {
   .main-menu {
     position: absolute;
+    box-sizing: border-box;
   }
 }
 @media (min-width: 855px) {

@@ -1,4 +1,4 @@
-<header class="iowa-bar iowa-bar--narrow">
+<header role="banner" class="iowa-bar iowa-bar--narrow">
   <div class="iowa-bar__container">
     <div class="logo logo--tab">
       <a target="_blank" rel="noopener" href="https://uiowa.edu">
@@ -55,7 +55,7 @@
     </div>
     <div class="link-list">
       <div *ngIf="showTestWarning" class="test-warning">
-        WARNING: TEST SYSTEM.
+        WARNING: TEST SYSTEM
       </div>
       <username-dropdown
         [user]="user"
@@ -65,7 +65,12 @@
   </div>
 </header>
 
-<nav id="navbar-primary" class="nav" [ngClass]="{ show: showNavBar }">
+<nav
+  id="navbar-primary"
+  role="navigation"
+  class="nav"
+  [ngClass]="{ show: showNavBar }"
+>
   <div class="main-menu">
     <ul class="menu">
       <li
@@ -85,7 +90,7 @@
             *ngIf="item.route"
             [attr.id]="'menuDropdown_' + i"
             [routerLink]="item.route"
-            (click)="showMenuDropdown[i] = !showMenuDropdown[i]"
+            (click)="toggleMenuCollapse(i)"
             [attr.aria-expanded]="showMenuDropdown[i]"
           >
             {{ item.text }}
@@ -99,7 +104,7 @@
             *ngIf="!item.route"
             [attr.id]="'menuDropdown_' + i"
             href="javascript:void(0)"
-            (click)="showMenuDropdown[i] = !showMenuDropdown[i]"
+            (click)="toggleMenuCollapse(i)"
             [attr.aria-expanded]="showMenuDropdown[i]"
           >
             {{ item.text }}
