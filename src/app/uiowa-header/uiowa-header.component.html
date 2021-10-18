@@ -31,7 +31,7 @@
     </div>
     <div class="site-name-bar">
       <button
-        class="navbar-toggler"
+        class="iowa-navbar-toggler"
         type="button"
         (click)="showNavBar = !showNavBar"
         aria-controls="navbar-primary"
@@ -53,7 +53,7 @@
       </button>
       <h1 class="site-name">{{ siteName }}</h1>
     </div>
-    <div class="link-list">
+    <div class="iowa-username-bar">
       <div *ngIf="showTestWarning" class="test-warning">
         WARNING: TEST SYSTEM
       </div>
@@ -68,11 +68,11 @@
 <nav
   id="navbar-primary"
   role="navigation"
-  class="nav"
+  class="iowa-nav-bar"
   [ngClass]="{ show: showNavBar }"
 >
-  <div class="main-menu">
-    <ul class="menu">
+  <div class="iowa-main-menu">
+    <ul class="iowa-internal-routes">
       <li
         class="menu-item"
         *ngFor="let item of internalRoutes; let i = index"
@@ -85,7 +85,7 @@
         >
           {{ item.text }}
         </a>
-        <div *ngIf="item.subMenus" class="menu-dropdown">
+        <div *ngIf="item.subMenus" class="iowa-submenu-dropdown">
           <a
             *ngIf="item.route"
             [attr.id]="'menuDropdown_' + i"
@@ -96,7 +96,7 @@
             {{ item.text }}
             <span
               aria-hidden="true"
-              class="dropdown-item-arrow"
+              class="iowa-dropdown-item-arrow"
               [ngClass]="showMenuDropdown[i] ? 'up' : 'down'"
             ></span>
           </a>
@@ -110,19 +110,19 @@
             {{ item.text }}
             <span
               aria-hidden="true"
-              class="dropdown-item-arrow"
+              class="iowa-dropdown-item-arrow"
               [ngClass]="showMenuDropdown[i] ? 'up' : 'down'"
             ></span>
           </a>
           <div
-            class="menu-dropdown-content"
+            class="iowa-submenu-dropdown-content"
             [attr.aria-labelledby]="'menuDropdown_' + i"
             [ngClass]="{ show: showMenuDropdown[i] }"
           >
             <ng-container *ngFor="let subitem of item.subMenus">
               <a
                 *ngIf="subitem.route"
-                class="menu-dropdown-item"
+                class="iowa-submenu-dropdown-item"
                 [routerLink]="subitem.route"
                 (click)="showMenuDropdown[i] = false; showNavBar = false"
               >
@@ -133,10 +133,10 @@
         </div>
       </li>
     </ul>
-    <div class="external-links">
+    <div class="iowa-external-links">
       <ng-container *ngFor="let item of externalLinks; last as isLast">
         <a [href]="item.url">{{ item.text }}</a>
-        <span *ngIf="!isLast" class="external-link-spacer"></span>
+        <span *ngIf="!isLast" class="iowa-external-link-spacer"></span>
       </ng-container>
     </div>
   </div>

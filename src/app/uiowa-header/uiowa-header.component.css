@@ -1,4 +1,8 @@
-.link-list {
+:host {
+  z-index: 1000;
+}
+
+.iowa-username-bar {
   display: flex;
   justify-content: flex-end;
   flex-grow: 2;
@@ -7,7 +11,7 @@
 }
 
 @media (min-width: 855px) {
-  .link-list {
+  .iowa-username-bar {
     padding-right: 15px;
     order: 3;
   }

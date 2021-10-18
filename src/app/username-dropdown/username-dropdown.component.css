@@ -2,12 +2,12 @@
   display: flex;
 }
 
-.dropdown-menu {
+.iowa-username-dropdown-menu {
   display: flex;
   font-family: sans-serif;
   position: relative;
 }
-.user-button {
+.iowa-user-button {
   color: #ffcd00;
   cursor: pointer;
   padding: 0 !important;
@@ -20,35 +20,28 @@
 }
 
 @media (min-width: 855px) {
-  .user-button {
+  .iowa-user-button {
     color: #151515;
   }
 }
-.user-name {
+.iowa-user-name {
   white-space: nowrap;
   text-overflow: ellipsis;
   overflow: hidden;
   display: inline-block;
   vertical-align: bottom;
 }
-.original-username {
+.iowa-original-username {
   color: #ff4759;
   font-weight: 700;
 }
 @media (min-width: 855px) {
-  .original-username {
+  .iowa-original-username {
     color: #ab0000;
   }
 }
 
-.external-link {
-  color: #b0b0b0;
-  font-size: 0.9rem;
-  align-self: center;
-  white-space: nowrap;
-}
-
-.dropdown-menu-right {
+.iowa-user-dropdown-menu-right {
   position: absolute;
   float: none;
   right: 0;
@@ -67,7 +60,8 @@
   border-radius: 0.25rem;
   box-shadow: 0 4px 8px 0px rgba(0, 0, 0, 0.2);
 }
-.dropdown-toggle::after {
+
+.iowa-user-button::after {
   margin: 0 0 2px 4px;
   display: inline-block;
   content: '';
@@ -78,16 +72,16 @@
   -webkit-transform: rotate(45deg);
 }
 
-.dropdown-menu-right.show {
+.iowa-user-dropdown-menu-right.show {
   display: block !important;
 }
 
-.username-dropdown {
+.iowa-username-dropdown {
   min-width: 7rem;
   padding: 0.5rem 1rem;
 }
 
-.username-dropdown-button {
+.iowa-username-dropdown-button {
   color: #0064d0;
   background-color: transparent;
   white-space: nowrap;
@@ -101,7 +95,7 @@
   line-height: 1.5;
 }
 
-.dropdown-divider {
+.iowa-username-dropdown .dropdown-divider {
   height: 0;
   margin: 0.5rem 0;
   overflow: hidden;
